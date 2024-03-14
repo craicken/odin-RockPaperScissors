@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        play(button.id);
+        console.log(play(button.id));
     })
 })
 
