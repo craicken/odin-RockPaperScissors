@@ -1,10 +1,19 @@
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        play(button.id);
+    })
+})
+
+
 function getComputerChoice () {
     let choices = ["rock", "paper", "scissors"];
     return choices[(Math.floor(Math.random() * choices.length))];
 };
 
-function play () {
-    let userChoice = prompt("Enter rock, paper or scissors: ").toLowerCase();
+function play (userChoice) {
+    // let userChoice = prompt("Enter rock, paper or scissors: ").toLowerCase();
     let computerChoice = getComputerChoice();
     switch (userChoice) {
         case "rock":
@@ -41,4 +50,4 @@ function determineRoundsAndPlay () {
     };
 };
 
-determineRoundsAndPlay();
+// determineRoundsAndPlay();
