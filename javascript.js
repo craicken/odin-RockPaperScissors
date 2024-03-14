@@ -1,3 +1,5 @@
+const userChoiceDiv = document.querySelector("#userChoice");
+const resultsDiv = document.querySelector("#results");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach((button) => {
@@ -17,29 +19,35 @@ function play (userChoice) {
     let computerChoice = getComputerChoice();
     switch (userChoice) {
         case "rock":
+            userChoiceDiv.textContent = "You chose rock!";
             if(computerChoice === "rock") {
-                return "Computer chose " + computerChoice + "! It's a tie!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! It's a tie!";
             } else if(computerChoice === "paper") {
-                return "Computer chose " + computerChoice + "! You lose!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! You lose!";
             } else {
-                return "Computer chose " + computerChoice + "! You win!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! You win!";
             };
+            break;
         case "paper":
+            userChoiceDiv.textContent = "You chose paper!";
             if(computerChoice === "rock") {
-                return "Computer chose " + computerChoice + "! You win!!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! You win!!";
             } else if(computerChoice === "paper") {
-                return "Computer chose " + computerChoice + "! It's a tie!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! It's a tie!";
             } else {
-                return "Computer chose " + computerChoice + "! You lose!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! You lose!";
             };
+            break;
         case "scissors":
+            userChoiceDiv.textContent = "You chose scissors!";
             if(computerChoice === "rock") {
-                return "Computer chose " + computerChoice + "! You lose!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! You lose!";
             } else if(computerChoice === "paper") {
-                return "Computer chose " + computerChoice + "! You win!";
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! You win!";
             } else {
-                return "Computer chose " + computerChoice + "! It's a tie!";
-            }
+                resultsDiv.textContent = "Computer chose " + computerChoice + "! It's a tie!";
+            };
+            break;
     }
 };
 
