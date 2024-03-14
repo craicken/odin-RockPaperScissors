@@ -32,6 +32,13 @@ function play () {
                 return "Computer chose " + computerChoice + "! It's a tie!";
             }
     }
-}
+};
 
-console.log(play());
+function determineRoundsAndPlay () {
+    let rounds = prompt("How many rounds would you like to play? ");
+    for (let i = 0; i < rounds; i++) {
+        console.log(play());
+    };
+};
+
+determineRoundsAndPlay();
